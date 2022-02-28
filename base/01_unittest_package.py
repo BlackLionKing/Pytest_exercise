@@ -10,11 +10,21 @@
 """
 
 import sys
-sys.path.append('..')
-from case.unittest_case import Test_unittest
+import unittest
 
-# 初始化对象
-test = Test_unittest()
-# 传参 接收返回
-add = test.test_add(1, 3)
-print(add)
+sys.path.append('..')
+from case.test_case import Test_unittest
+
+
+class Test_unit(unittest.TestCase):
+    def test_add(self):
+        # 初始化对象
+        self.test = Test_unittest()
+        # 传参 接收返回
+        self.add = self.test.test_add(1, 3)
+        print(self.add)
+        self.assertEqual(self.add, 4)
+
+
+if __name__ == '__main__':
+    unittest.main()
