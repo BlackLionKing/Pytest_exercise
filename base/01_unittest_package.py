@@ -13,13 +13,13 @@ import sys
 import unittest
 
 sys.path.append('..')
-from case.test_case import Test_unittest
+from case.test_case import Add
 
 
 class Test_unit(unittest.TestCase):
     def test_add(self):
         # 初始化对象
-        self.test = Test_unittest()
+        self.test = Add()
         # 传参 接收返回
         self.add = self.test.test_add(1, 3)
         print(self.add)
