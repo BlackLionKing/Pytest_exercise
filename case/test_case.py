@@ -5,5 +5,11 @@
 
 
 class Add(object):
-    def test_add(self, a, b):
+    """
+        type hints类型提示
+            表示该方法参数 a, b为int类型 返回也为int类型
+            只在ide里做提示作用 python并不会为该方法指定int类型
+
+    """
+    def test_add(self, a: int, b: int) -> int:
         return a + b
