@@ -2,6 +2,24 @@ from case.cala_case import Cala
 import pytest
 import yaml
 
+"""
+    pytest命令参数
+        -k  包含
+            举例
+                pytest -k 'add or ride' 03_test_cala.py 表示只运行包含add或者ride的测试用例
+        
+        --collect-only 表示查看当前文件内有多少测试用例(每条测试数据为一条) 只收集 而不执行
+            举例
+                pytest --collect-only 03_test_cala.py
+    
+        --junit-xml 生成一个执行结果(测试设备/失败成功用例条数等详细信息)的xml文件
+            举例
+                # 指定目录及文件名
+                pytest --junit-xml=./result.xml 03_test_cala.py
+
+
+"""
+
 
 class Test_cala(object):
     # 全局变量 指定测试数据
