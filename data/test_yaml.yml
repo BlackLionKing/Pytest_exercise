@@ -1,4 +1,5 @@
 # 引用 defaults为公共数据
+# & 锚点和 * 别名，可以用来引用
 defaults: &defaults
   IP: 172.168.6.102
   Host: 8888
