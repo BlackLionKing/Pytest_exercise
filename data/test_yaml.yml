@@ -1,0 +1,13 @@
+# 引用 defaults为公共数据
+defaults: &defaults
+  IP: 172.168.6.102
+  Host: 8888
+
+dev:
+  database: dev_db
+  # 引用defaults
+  <<: *defaults
+
+test:
+  database: test_db
+  <<: *defaults
